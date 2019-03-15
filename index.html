@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    HTML CSS Competency by Josh Parker
+  </title>
+  <link href="./style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <h1>
+    WELCOME TO MY TWISTED MIND
+  </h1>
+  <section id="interactivity-stuff">
+    <div id="style-div">
+      <h2>Paragraph text styling:</h2>
+      <div id="style-controls"></div>
+    </div>
+    <div id="attrib-div">
+      <h2>Paragraph text attributes:</h2>
+      <div id="attrib-controls">
+        <div class="attrib-control">
+          <label>TEXT DIRECTION</label>
+          <select class="attrib-control" id="text-dir">
+            <option>Left To Right</option>
+            <option>Right To Left</option>
+          </select>
+        </div>
+        <div class="attrib-control">
+          <label>TITLE</label>
+          <input id="seuss-title">
+        </div>
+      </div>
+    </div>
+  </section>
+  <article id="seuss-stuff">
+    <p id="seuss-text">
+      I am Sam. Sam I Am. Do you like green eggs and ham? I do not like them, Sam I Am. Would you like them here or
+      there? I would not like them here nor there. I would not like them anywhere! I do not like green eggs and ham. I
+      do not like them, Sam I Am. Would you like them in a box? Would you like them with a fox? Would you like them in
+      a house? Would you like them with a mouse? No. I would not like them in a box. I would not like them with a fox.
+      I would not like them in a house. I would not like them with a mouse. I would not like them here nor there. I
+      would not like them anywhere! I do not like green eggs and ham. I do not like them, Sam I Am. Would you eat them
+      in the rain? Would you eat them on a train? Would you, could you in
+    </p>
+    <span id="seuss-brag">
+      The rabbit felt might important that day On top of the hill in the sun where he lay. He felt SO important up
+      there on that hill That he started in bragging, as animals will And he boasted out loud, as he threw out his
+      chest, "Of all of the beasts in the world, I'm the best! On land, and on sea . . . even up in the sky No animal
+      lives who is better than I!" "What's <i>that?</i>" growled a voice that was terribly gruff. "Now why do you say
+      such ridiculous stuff?"
+    </span>
+    <ul>
+      <li>THE CAT IN THE HAT</li>
+      <li>THE CAT IN THE HAT COMES BACK</li>
+      <li>ONE FISH TWO FISH RED FISH BLUE FISH</li>
+      <li>GREEN EGGS AND HAM</li>
+      <li>HOP ON POP</li>
+      <li>DR. SEUSS'S ABC</li>
+      <li>FOX IN SOCKS</li>
+    </ul>
+    <ol>
+      <li>THE KING'S STILTS</li>
+      <li>M<span class="sub-small">C</span>ELLIGOT'S POOL</li>
+      <li>IF I RAN THE ZOO</li>
+      <li>ON BEYOND ZEBRA!</li>
+      <li>IF I RAN THE CIRCUS</li>
+      <li>THE LORAX</li>
+      <li>BARTHOLOMEW AND THE OOBLECK</li>
+    </ol>
+    <img src="https://i.imgur.com/oWiHBqI.jpg">
+    <div class="image-descendant">
+     <img src="https://i.imgur.com/5NwCt5E.png">
+    </div>
+  </article>
+  <footer id="obligatory-footer">
+    Thank you for visiting my HTML CSS Competencies!<br>Copyright 2019 Josh Parker
+  </footer>
+  <script>
+    const selectControls = [
+      ['seuss-font', 'FONT'],
+      ['seuss-border-style', 'BORDER STYLE'],
+      ['seuss-box-sizing', 'BOX SIZING'],
+      ['seuss-float-type', 'FLOAT TYPE'],
+      ['seuss-display-type', 'DISPLAY TYPE'],
+      ['seuss-bg-color','BACKGROUND COLOR'],
+      ['seuss-position','POSITION']
+    ];
+
+    const selectSliders = [
+      ['seuss-size', 'SIZE', 6, 36, 12],
+      ['seuss-red', 'RED', 0, 255, 0],
+      ['seuss-green', 'GREEN', 0, 255, 0],
+      ['seuss-blue', 'BLUE', 0, 255, 0],
+      ['seuss-margin', 'MARGIN', 0, 100, 0],
+      ['seuss-padding', 'PADDING', 0, 100, 40],
+      ['seuss-weight', 'FONT WEIGHT',1,9,4]
+    ];
+
+    const styleSelectors = [['#seuss-font','seussFont'],['#seuss-border-style','seussBorderStyle'],['#seuss-box-sizing','seussBoxSizing'],['#seuss-float-type','seussFloatType'],['#seuss-display-type','seussDisplayType'],['#seuss-size','seussSize'],['#seuss-red','seussRed'],['#seuss-green','seussGreen'],['#seuss-blue','seussBlue'],['#seuss-margin','seussMargin'],['#seuss-padding','seussPadding'],['#seuss-weight','seussWeight'],['#seuss-bg-color','seussBGColor'],['#seuss-position','seussPosition']];
+
+    const selectPopulators = [
+      ['#seuss-font',['Comic Sans MS', 'Times New Roman', 'Verdana', 'Cambria',
+      'Courier New', 'Consolas', 'Calibri', 'Wingdings', 'Impact', 'SimSun',
+      'Segoe UI Black', 'MV Boli', 'Lucida Console', 'Bahnschrift', 'Script'
+    ]],
+      ['#seuss-border-style',['solid', 'dashed', 'dotted', 'double', 'groove', 'ridge', 'inset', 'outset', 'none', 'hidden']],
+      ['#seuss-box-sizing',['content-box', 'border-box', 'initial', 'inherit']],
+      ['#seuss-float-type',['none', 'left', 'right', 'initial', 'inherit']],
+      ['#seuss-display-type',['block', 'inline', 'contents', 'flex', 'grid', 'inline-block', 'inline-flex', 'inline-grid',
+      'inline-table', 'list-item', 'run-in', 'table', 'table-caption', 'table-column-group', 'table-header-group',
+      'table-footer-group', 'table-row-group', 'table-cell', 'table-column', 'table-row', 'none', 'initial',
+      'inherit'
+    ]],
+      ['#seuss-bg-color',['white','black','blue','red','green','yellow','pink','chartreuse','silver'
+    ]],
+      ['#seuss-position',['static','absolute','fixed','relative','sticky','initial','inherit']]
+    ];
+
+    const textDirDict = {
+      'Left To Right': 'ltr',
+      'Right To Left': 'rtl'
+    }
+
+    const hiddenDict = {
+      'TRUE': true,
+      'FALSE': false
+    }
+
+    const seussStyles = {
+      seussRed: 0,
+      seussGreen: 0,
+      seussBlue: 0,
+      seussSize: 12,
+      seussFont: 'Comic Sans MS',
+      seussMargin: 0,
+      seussBorderStyle: 'solid',
+      seussPadding: 40,
+      seussBoxSizing: 'content-box',
+      seussFloatType: 'none',
+      seussDisplayType: 'block',
+      seussWeight: 4,
+      seussBGColor: 'white',
+      seussPosition: 'static'
+    }
+
+    let textDir = 'ltr';
+
+    function seussStyle() {
+      let a = seussStyles;
+      return `font-size:${a.seussSize}px;color:rgb(${a.seussRed}, ${a.seussGreen}, ${a.seussBlue});font-family:${a.seussFont};margin:${a.seussMargin}px;border-style:${a.seussBorderStyle};padding:${a.seussPadding/10}em;box-sizing:${a.seussBoxSizing};float:${a.seussFloatType};display:${a.seussDisplayType};font-weight:${a.seussWeight*100};background-color:${a.seussBGColor};position:${a.seussPosition};`;
+    }
+
+    selectControls.forEach(control => {
+      const a = document.createElement('div');
+      const b = document.createElement('label');
+      const c = document.createElement('select');
+      document.querySelector('#style-controls').appendChild(a);
+      a.setAttribute('class', 'style-control');
+      a.appendChild(b);
+      b.innerText = control[1];
+      b.appendChild(c);
+      c.setAttribute('class', 'style-control');
+      c.setAttribute('id', control[0])
+    })
+
+    selectSliders.forEach(slider => {
+      const a = document.createElement('div');
+      const b = document.createElement('label');
+      const c = document.createElement('input');
+      document.querySelector('#style-controls').appendChild(a);
+      a.setAttribute('class', 'slidecontainer style-control');
+      a.appendChild(b);
+      b.innerText = slider[1];
+      b.appendChild(c);
+      c.setAttribute('type', 'range');
+      c.setAttribute('min', slider[2]);
+      c.setAttribute('max', slider[3]);
+      c.setAttribute('value', slider[4]);
+      c.setAttribute('class', 'slider style-control');
+      c.setAttribute('id', slider[0]);
+    })
+
+    selectPopulators.forEach(populator => {
+      populator[1].forEach(item => {
+        const a = document.createElement('option');
+        document.querySelector(populator[0]).appendChild(a);
+        a.innerText = item;
+      })
+    })
+
+    styleSelectors.forEach(selector => {
+      document.querySelector(selector[0]).oninput = function () {
+        seussStyles[selector[1]] = event.target.value;
+        document.querySelector('#seuss-text').setAttribute('style',seussStyle());
+      }
+    })
+
+    document.querySelector('#text-dir').onchange = function () {
+      textDir = event.target.value;
+      document.querySelector('#seuss-text').setAttribute('dir', textDirDict[textDir]);
+    }
+    document.querySelector('#seuss-title').onchange = function () {
+      console.log('title changed');
+      document.querySelector('#seuss-text').setAttribute('title', event.target.value);
+    }
+  </script>
+</body>
+
+</html>
